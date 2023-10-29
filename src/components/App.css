@@ -1,0 +1,150 @@
+body {
+  background-color: #151c25;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  color: #333941;
+  height: 100%;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1700px;
+}
+
+.timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  padding: 3rem 1rem;
+  height: 60%;
+}
+.heading {
+  color: #b9cfe2;
+  font-size: 3.7rem;
+  text-align: left;
+  margin: 0px;
+  align-self: center;
+  flex-shrink: 2;
+}
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.btn {
+  color: #b9cfe2;
+  margin-left: 1.4rem;
+  width: 100px;
+  height: 60px;
+}
+
+.CircularProgressbar {
+  min-width: 370px;
+}
+@media screen and (min-width: 1300px) {
+  .CircularProgressbar {
+    min-width: 470px;
+  }
+}
+
+.play-pause-btn {
+  width: 30%;
+  height: 30%;
+  color: #151c25;
+}
+
+.setting-container {
+  background: #e5ebf0;
+  position: absolute;
+  width: 35%;
+  min-width: 400px;
+  min-height: 230px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin: auto;
+  z-index: 2;
+  border-radius: 17px;
+}
+
+.setting-nav {
+  border-bottom: 1.6px solid #97aaba;
+  display: flex;
+  padding: 14px 2px;
+  height: 20%;
+  /* background-color: blue; */
+  justify-content: space-between;
+}
+.setting-title {
+  padding: 8px 14px;
+  letter-spacing: 0px;
+  text-align: left;
+  font-size: xx-large;
+  font-weight: bold;
+
+  /* font-weight: 600; */
+  width: 80%;
+  /* background-color: red; */
+}
+
+.setting-btn {
+  padding: 8px 10px;
+  /* background-color: bisque; */
+  color: #151c25;
+}
+.setting-timer {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+}
+
+.setting-timer-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 19px;
+  flex-wrap: wrap;
+}
+.setting-block {
+  width: 40%;
+  display: block;
+}
+.setting-t1 {
+  display: block;
+  width: 100%;
+  padding: 6px 0px;
+  text-align: left;
+}
+.box {
+  margin-right: 0px;
+  padding-right: 0px;
+  width: 100%;
+}
+.setting-timer-footer {
+  text-align: left;
+  color: #e4f0f9;
+  background-color: #585f6b;
+  border-radius: 17px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  text-align: center;
+  padding: 9px 2px;
+  align-items: center;
+  height: 15%;
+}
