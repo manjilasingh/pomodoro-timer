@@ -12,12 +12,12 @@ import Display from "./Display";
 export const SettingContext = React.createContext();
 
 function Timer() {
-  const [focusTime, setFocusTime] = useState(50);
-  const [breakTime, setBreakTime] = useState(10);
+  const [focusTime, setFocusTime] = useState(5);
+  const [breakTime, setBreakTime] = useState(1);
   const [isPaused, setPaused] = useState(true);
 
-  const [remainingFocusTime, setRemainingFocusTime] = useState(50 * 60);
-  const [remainingBreakTime, setRemainingBreakTime] = useState(10 * 60);
+  const [remainingFocusTime, setRemainingFocusTime] = useState(5 * 60);
+  const [remainingBreakTime, setRemainingBreakTime] = useState(1 * 60);
 
   const [focusMode, setFocusMode] = useState(true);
   useEffect(() => {

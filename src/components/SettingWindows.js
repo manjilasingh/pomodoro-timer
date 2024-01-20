@@ -17,11 +17,11 @@ function SettingWindow() {
   const [showSetting, setSetting] = useContext(SettingWindowContext);
 
   function closeFunction() {
-    setRemainingFocusTime(50 * 60);
-    setRemainingBreakTime(10 * 60);
-    setFocusTime(50);
+    setRemainingFocusTime(5 * 60);
+    setRemainingBreakTime(1 * 60);
+    setFocusTime(5);
     setSetting(false);
-    setBreakTime(10);
+    setBreakTime(1);
   }
   function saveChanges() {
     setSetting(false);
