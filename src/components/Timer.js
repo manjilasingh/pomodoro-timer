@@ -8,7 +8,7 @@ import Navbar from "./Navbar";
 import { BsPauseCircleFill } from "react-icons/bs";
 import React, { useState, createContext, useEffect } from "react";
 import Display from "./Display";
-
+// eslint-disable-next-line
 export const SettingContext = React.createContext();
 
 function Timer() {
@@ -63,6 +63,7 @@ function Timer() {
   const percent = Math.round((t / (r * 60)) * 100);
 
   return (
+    // eslint-disable-next-line
     <SettingContext.Provider
       value={{
         focusTime,
