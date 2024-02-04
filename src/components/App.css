@@ -76,6 +76,7 @@ body {
   background: #436850;
   position: absolute;
   width: 37%;
+  min-width: 300px;
   max-width: 500px;
   min-height: 300px;
   top: 50%;
