@@ -6,6 +6,7 @@ import "react-circular-progressbar/dist/styles.css";
 import { BsPlayCircleFill } from "react-icons/bs";
 import Navbar from "./Navbar";
 import { BsPauseCircleFill } from "react-icons/bs";
+import { IoCaretBackOutline } from "react-icons/io5";
 import React, { useState, createContext, useEffect } from "react";
 import Display from "./Display";
 // eslint-disable-next-line
@@ -37,15 +38,13 @@ function Timer() {
       }
 
       if (focusMode) {
+        //in focus mode
         setRemainingFocusTime((prevTime) => {
-          console.log(remainingFocusTime);
           return prevTime - 1;
         });
       } else {
         setRemainingBreakTime((prevTime) => {
-          prevTime = prevTime - 1;
-          console.log(prevTime);
-          return prevTime;
+          return prevTime - 1;
         });
       }
     }, 1000);
@@ -100,20 +99,39 @@ function Timer() {
                 pathColor: focusMode ? "#50C878" : "#c85a50",
                 trailColor: "transparent",
               })}
-            >
-              {isPaused ? (
-                <BsPlayCircleFill
-                  className="play-pause-btn"
-                  onClick={() => setPaused(false)}
-                />
-              ) : (
-                <BsPauseCircleFill
-                  className="play-pause-btn"
-                  onClick={() => setPaused(true)}
-                />
-              )}
-            </CircularProgressbarWithChildren>
+            ></CircularProgressbarWithChildren>
             ;
+          </div>
+          <div class="btn-container">
+            <IoCaretBackOutline
+              className="restart-btn"
+              onClick={() => {
+                setPaused(true);
+                setFocusMode(true);
+                setRemainingFocusTime(focusTime * 60);
+                setRemainingBreakTime(breakTime * 60);
+              }}
+            />
+            {isPaused ? (
+              <BsPlayCircleFill
+                className="play-pause-btn"
+                onClick={() => setPaused(false)}
+              />
+            ) : (
+              <BsPauseCircleFill
+                className="play-pause-btn"
+                onClick={() => setPaused(true)}
+              />
+            )}
+            <IoCaretBackOutline
+              className="skip-btn"
+              onClick={() => {
+                setPaused(false);
+                setFocusMode(false);
+                setRemainingFocusTime(focusTime * 60);
+                setRemainingBreakTime(breakTime * 60);
+              }}
+            />
           </div>
           <Display />
         </div>
