@@ -16,6 +16,8 @@ function Navbar() {
     if (!isPlaying) {
       audio.play().catch((error) => {
         console.error("Error playing audio", error);
+        //looping
+      audio.loop=true;
       });
     } else {
       audio.pause();
