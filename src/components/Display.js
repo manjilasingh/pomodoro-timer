@@ -2,6 +2,7 @@ import { SettingContext } from "./Timer";
 import { useContext } from "react";
 
 function Display() {
+  // eslint-disable-next-line
   const {
     focusTime,
     setFocusTime,

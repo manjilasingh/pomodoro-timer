@@ -8,6 +8,7 @@ export const SettingWindowContext = React.createContext();
 function Navbar() {
   const [showSetting, setSetting] = useState(false);
   return (
+    // eslint-disable-next-line
     <SettingWindowContext.Provider value={[showSetting, setSetting]}>
       <div className="navbar-container">
         <h1 className="heading">POMODORO TIMER</h1>

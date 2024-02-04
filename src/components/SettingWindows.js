@@ -16,6 +16,7 @@ function SettingWindow() {
   } = useContext(SettingContext);
   const [showSetting, setSetting] = useContext(SettingWindowContext);
 
+  // eslint-disable-next-line
   function closeFunction() {
     setRemainingFocusTime(5 * 60);
     setRemainingBreakTime(1 * 60);
@@ -32,7 +33,7 @@ function SettingWindow() {
       <div className="setting-container">
         <div className="setting-nav">
           <div className="setting-title">CUSTOM TIMER</div>
-          <AiFillCloseCircle className="setting-btn" onClick={closeFunction} />
+          <AiFillCloseCircle className="setting-btn" onClick={saveChanges} />
         </div>
         <div className="setting-timer">
           <div className="setting-timer-container">

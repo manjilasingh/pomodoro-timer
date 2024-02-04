@@ -61,7 +61,18 @@ function Timer() {
   let t = focusMode ? remainingFocusTime : remainingBreakTime;
   let r = focusMode ? focusTime : breakTime;
   const percent = Math.round((t / (r * 60)) * 100);
-
+  let minutes = 0,
+    seconds = 0;
+  if (focusMode) {
+    minutes = Math.floor(remainingFocusTime / 60);
+    seconds = remainingFocusTime % 60;
+  } else {
+    minutes = Math.floor(remainingBreakTime / 60);
+    seconds = remainingBreakTime % 60;
+  }
+  let formattedMinutes = String(minutes).padStart(2, "0");
+  let formattedSeconds = String(seconds).padStart(2, "0");
+  let timeValue = `${formattedMinutes}:${formattedSeconds}`;
   return (
     // eslint-disable-next-line
     <SettingContext.Provider
@@ -81,9 +92,11 @@ function Timer() {
           <div className="timer-container">
             <CircularProgressbarWithChildren
               value={percent}
+              text={timeValue}
               background
               styles={buildStyles({
-                backgroundColor: "#486882",
+                textColor: "#DAE8E9 ",
+                backgroundColor: "#0f2e23",
                 pathColor: focusMode ? "#50C878" : "#c85a50",
                 trailColor: "transparent",
               })}
