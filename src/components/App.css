@@ -1,5 +1,5 @@
 body {
-  background-color: #12372a;
+  background-color: #2b3137;
   text-align: center;
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -64,7 +64,7 @@ body {
 }
 
 .setting-container {
-  background: #436850;
+  background: #4b5762;
   position: absolute;
   width: 37%;
   min-width: 300px;
@@ -119,7 +119,7 @@ body {
   height: 26%;
   min-width: 80px;
   max-width: 150px;
-  color: #adbc9f;
+  color: #f2ffe9;
 }
 .skip-btn {
   transform: scaleX(-1);
@@ -127,14 +127,14 @@ body {
   height: 26%;
   min-width: 80px;
   max-width: 150px;
-  color: #adbc9f;
+  color: #f2ffe9;
 }
 .play-pause-btn {
   width: 22%;
   height: 22%;
   max-width: 120px;
   min-width: 76px;
-  color: #adbc9f;
+  color: #f2ffe9;
 }
 .setting-timer {
   /* background-color: red; */
@@ -168,7 +168,7 @@ body {
 .setting-timer-footer {
   text-align: center;
   color: #ffffff;
-  background-color: #61796af0;
+  background-color: #647483fa;
   border-radius: 10px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;

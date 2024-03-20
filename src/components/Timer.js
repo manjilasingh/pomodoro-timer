@@ -95,7 +95,7 @@ function Timer() {
               background
               styles={buildStyles({
                 textColor: "#DAE8E9 ",
-                backgroundColor: "#0f2e23",
+                backgroundColor: "#2b3137",
                 pathColor: focusMode ? "#50C878" : "#c85a50",
                 trailColor: "transparent",
               })}
